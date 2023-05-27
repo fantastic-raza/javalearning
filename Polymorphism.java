@@ -51,6 +51,6 @@ public class Polymorphism {
         sm2.seePhotos();
         //sm2.makeCall();-we can only use the object sm2 for reference (camera) methods
         smartphone2 sm4= new smartphone2();
-        //all methods of interfaces and class can be used
+        //all methods of extended class and implemented interfaces can be used
     }
 }
