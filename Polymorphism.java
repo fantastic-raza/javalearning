@@ -1,5 +1,5 @@
 package oops;
-class cellphone {
+class cellphone2 {
     void makeCall(int phone) {
         System.out.println("dailing......."+phone);
     }
@@ -12,19 +12,19 @@ class cellphone {
         System.out.println("rejected.....");
     }
 }
-interface camera{
-        void clickPhotos();
-        void seePhotos();
-        //that,s how we can update interfaces
-        default void recording4k(){
-            System.out.println("4k recording.......");
-        }
+interface camera2{
+    void clickPhotos();
+    void seePhotos();
+    //that,s how we can update interfaces
+    default void recording4k(){
+        System.out.println("4k recording.......");
+    }
 }
-interface mediaPlayer{
-        void play();
-        void pause();
+interface mediaPlayer2{
+    void play();
+    void pause();
 }
-class smartphone extends cellphone implements camera ,mediaPlayer{
+class smartphone2 extends oops.cellphone2 implements oops.camera2, oops.mediaPlayer2 {
     @Override
     public void clickPhotos() {
         System.out.println("clicked photos");
@@ -45,13 +45,10 @@ class smartphone extends cellphone implements camera ,mediaPlayer{
         System.out.println("playing music......");
     }
 }
-
-public class multiple_inheritance {
+public class Polymorphism {
     public static void main(String[] args) {
-        smartphone sm1=new smartphone();
-        sm1.acceptCall(91888888);
-        sm1.rejectCall();
-        sm1.clickPhotos();
-        sm1.seePhotos();
+        camera2 sm2=new smartphone2();
+        sm2.seePhotos();
+        //sm2.makeCall();-we can only use the object sm2 for camera methods
     }
 }
