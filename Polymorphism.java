@@ -49,6 +49,8 @@ public class Polymorphism {
     public static void main(String[] args) {
         camera2 sm2=new smartphone2();
         sm2.seePhotos();
-        //sm2.makeCall();-we can only use the object sm2 for camera methods
+        //sm2.makeCall();-we can only use the object sm2 for reference (camera) methods
+        smartphone2 sm4= new smartphone2();
+        //all methods of interfaces and class can be used
     }
 }
